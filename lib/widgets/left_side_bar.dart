@@ -40,7 +40,7 @@ class LeftSideBar extends StatelessWidget {
     return BlocBuilder<AppCubit, AppCubitState>(
         builder: (context, state) => SizedBox(
               width: 250,
-              child: Column(children: [...state.features.map((feature) => FeatureItem(item: feature)).toList()]),
+              child: ListView(children: [...state.features.map((feature) => FeatureItem(item: feature)).toList()]),
             ));
   }
 }

@@ -1,6 +1,9 @@
 import 'package:dev_tools/models/feature_type.dart';
 import 'package:dev_tools/providers/app_cubit.dart';
+import 'package:dev_tools/widgets/features/md5.dart';
+import 'package:dev_tools/widgets/features/qr.dart';
 import 'package:dev_tools/widgets/features/transformation.dart';
+import 'package:dev_tools/widgets/features/uuid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,10 +37,16 @@ class FeatureContent extends StatelessWidget {
         if (current == null) {
           return Container();
         }
-        if (current.type == FeatureType.transformation) {
-          return TransformationPad();
+        switch (current.type) {
+          case FeatureType.transformation:
+            return TransformationPad();
+          case FeatureType.uuid:
+            return UuidPad();
+          case FeatureType.qr:
+            return QrPad();
+          case FeatureType.hash:
+            return Md5Pad();
         }
-        return Container();
       },
     );
   }
@@ -61,7 +70,7 @@ class ContentBox extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             FeatureTitle(),
-            FeatureContent(),
+            Expanded(child: FeatureContent()),
           ],
         ),
       ),

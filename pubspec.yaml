@@ -21,6 +21,9 @@ dependencies:
   dart_code_viewer2: ^1.0.1
   flutter_simple_treeview: ^3.0.2
   dart_jsonwebtoken: ^2.7.1
+  uuid: ^3.0.7
+  qr_flutter: ^4.0.0
+  crypto: ^3.0.3
 
 dev_dependencies:
   flutter_test:

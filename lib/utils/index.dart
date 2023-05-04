@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
+import 'package:crypto/crypto.dart';
 
 String formatJSON(String json) {
   try {
@@ -39,4 +40,26 @@ String jwtDecoder(String token) {
   }
 }
 
-class Utils {}
+String urlEncoder(String text) {
+  try {
+    return Uri.encodeFull(text);
+  } catch (e) {
+    return "";
+  }
+}
+
+String urlDecoder(String text) {
+  try {
+    return Uri.decodeFull(text);
+  } catch (e) {
+    return "";
+  }
+}
+
+String generateMd5(String data) {
+  return md5.convert(utf8.encode(data)).toString();
+}
+
+String generateSHA1(String data) {
+  return sha1.convert(utf8.encode(data)).toString();
+}
