@@ -22,7 +22,7 @@ class FeatureItem extends StatelessWidget {
             color: isSelected ? Colors.blue[300] : Colors.transparent,
             child: Row(
               children: [
-                Icon(Icons.settings),
+                SizedBox(width: 20, height: 20, child: Image.asset('assets/icons/${item.icon}')),
                 SizedBox(width: 16),
                 Text(item.name, style: TextStyle(color: isSelected ? Colors.white : Colors.black)),
               ],

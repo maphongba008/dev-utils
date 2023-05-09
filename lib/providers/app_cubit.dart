@@ -23,15 +23,15 @@ class AppCubitState extends Equatable {
 class AppCubit extends Cubit<AppCubitState> {
   AppCubit()
       : super(AppCubitState(features: [
-          Feature(name: "JSON Formatter", description: "", icon: "", transform: formatJSON),
-          Feature(name: "Base64 Encode", description: "", icon: "", transform: base64Encoder),
-          Feature(name: "Base64 Decode", description: "", icon: "", transform: base64Decoder),
-          Feature(name: "JWT Debugger", description: "", icon: "", transform: jwtDecoder),
-          Feature(name: "UUID Generator", description: "", icon: "", type: FeatureType.uuid),
-          Feature(name: "URL Encode", description: "", icon: "", transform: urlEncoder),
-          Feature(name: "URL Decode", description: "", icon: "", transform: urlDecoder),
-          Feature(name: "MD5 Generator", description: "", icon: "", type: FeatureType.hash),
-          Feature(name: "QR Code Generator", description: "", icon: "", type: FeatureType.qr),
+          Feature(name: "JSON Formatter", description: "", icon: "json.png", transform: formatJSON),
+          Feature(name: "Base64 Encode", description: "", icon: "base64.png", transform: base64Encoder),
+          Feature(name: "Base64 Decode", description: "", icon: "base64.png", transform: base64Decoder),
+          Feature(name: "JWT Debugger", description: "", icon: "jwt.png", transform: jwtDecoder),
+          Feature(name: "UUID Generator", description: "", icon: "uuid.png", type: FeatureType.uuid),
+          Feature(name: "URL Encode", description: "", icon: "url.png", transform: urlEncoder),
+          Feature(name: "URL Decode", description: "", icon: "url.png", transform: urlDecoder),
+          Feature(name: "MD5 Generator", description: "", icon: "md5.png", type: FeatureType.hash),
+          Feature(name: "QR Code Generator", description: "", icon: "qrcode.png", type: FeatureType.qr),
         ], index: 0));
 
   setCurrentFeature(Feature feature) {
