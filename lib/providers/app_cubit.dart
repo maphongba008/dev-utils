@@ -32,6 +32,7 @@ class AppCubit extends Cubit<AppCubitState> {
           Feature(name: "URL Decode", description: "", icon: "url.png", transform: urlDecoder),
           Feature(name: "MD5 Generator", description: "", icon: "md5.png", type: FeatureType.hash),
           Feature(name: "QR Code Generator", description: "", icon: "qrcode.png", type: FeatureType.qr),
+          Feature(name: "Icon Generator", description: "", icon: "qrcode.png", type: FeatureType.icon),
         ], index: 0));
 
   setCurrentFeature(Feature feature) {

@@ -1,5 +1,6 @@
 import 'package:dev_tools/models/feature_type.dart';
 import 'package:dev_tools/providers/app_cubit.dart';
+import 'package:dev_tools/widgets/features/icon.dart';
 import 'package:dev_tools/widgets/features/md5.dart';
 import 'package:dev_tools/widgets/features/qr.dart';
 import 'package:dev_tools/widgets/features/transformation.dart';
@@ -46,7 +47,10 @@ class FeatureContent extends StatelessWidget {
             return QrPad();
           case FeatureType.hash:
             return Md5Pad();
+          case FeatureType.icon:
+            return IconPad();
         }
+        return Container();
       },
     );
   }

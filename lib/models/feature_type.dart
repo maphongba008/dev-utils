@@ -3,4 +3,6 @@ enum FeatureType {
   uuid,
   hash,
   qr,
+  appIcon,
+  icon,
 }
